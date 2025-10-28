@@ -1,0 +1,101 @@
+#ifndef IMAGES_H
+#define IMAGES_H
+
+#include <Arduino.h>
+
+// WiFi frame size
+#define wifiFrame_width 16
+#define wifiFrame_height 12
+
+const unsigned char wifi_1[] PROGMEM = {
+  B00000000,B00000000,
+  B00000011,B11000000,
+  B00001100,B00110000,
+  B00010000,B00001000,
+  B00100000,B00000100
+};
+
+const unsigned char wifi_2[] PROGMEM = {
+  B00000000,B00000000,
+  B00000011,B11000000,
+  B00001100,B00110000,
+  B00010000,B00001000,
+  B00100000,B00000100,
+  B01000000,B00000010
+};
+
+const unsigned char wifi_3[] PROGMEM = {
+  B00000000,B00000000,
+  B00000011,B11000000,
+  B00001100,B00110000,
+  B00010000,B00001000,
+  B00100000,B00000100,
+  B01000000,B00000010,
+  B10000000,B00000001
+};
+
+const unsigned char* wifiFrames[3] = { wifi_1, wifi_2, wifi_3 };
+
+// Gear frames (12x12)
+#define gearFrame_width 12
+#define gearFrame_height 12
+
+const unsigned char gear_1[] PROGMEM = {
+  B00000000,B00000000,
+  B00001111,B11100000,
+  B00011111,B11110000,
+  B00011100,B01110000,
+  B00011111,B11110000,
+  B00001111,B11100000
+};
+const unsigned char gear_2[] PROGMEM = {
+  B00000000,B00000000,
+  B00011111,B11110000,
+  B00111111,B11111000,
+  B00111000,B00111000,
+  B00111111,B11111000,
+  B00011111,B11110000
+};
+const unsigned char gear_3[] PROGMEM = {
+  B00000000,B00000000,
+  B00001111,B11100000,
+  B00011111,B11110000,
+  B00011100,B01110000,
+  B00011111,B11110000,
+  B00001111,B11100000
+};
+const unsigned char gear_4[] PROGMEM = {
+  B00000000,B00000000,
+  B00011111,B11110000,
+  B00111111,B11111000,
+  B00111000,B00111000,
+  B00111111,B11111000,
+  B00011111,B11110000
+};
+
+const unsigned char* gearFrames[4] = { gear_1, gear_2, gear_3, gear_4 };
+
+// active / inactive small symbols (8x8)
+const uint8_t activeSymbol[] PROGMEM = {
+  B00000000,
+  B00011000,
+  B00100100,
+  B01000010,
+  B00100100,
+  B00011000,
+  B00000000,
+  B00000000
+};
+
+const uint8_t inactiveSymbol[] PROGMEM = {
+  B00000000,
+  B00000000,
+  B00000000,
+  B00011000,
+  B00011000,
+  B00000000,
+  B00000000,
+  B00000000
+};
+
+#endif
